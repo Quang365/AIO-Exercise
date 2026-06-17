@@ -1,6 +1,6 @@
-import math
+import math 
 
-def f1_score(tp, fp, fn):
+def evaluate_f1_components(tp, fp, fn):
     if not isinstance(tp, int):
         print("tp must be int")
         return
@@ -21,7 +21,8 @@ def f1_score(tp, fp, fn):
     recall = tp / (tp + fn)
     f1_score = 2 * (precision * recall) / (precision + recall)
 
-    return f1_score
+    print("precision is", precision)
+    print("recall is", recall)
+    print("f1_score is", f1_score)
 
-assert round(f1_score(tp=2, fp=3, fn=5), 2) == 0.33
-print(f1_score(tp=2, fp=3, fn=5))
+evaluate_f1_components(10, 5, 3)
