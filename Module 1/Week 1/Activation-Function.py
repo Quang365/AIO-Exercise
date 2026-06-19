@@ -21,7 +21,7 @@ def interactive_activation_function():
     elif input_function == "relu":
         result = max(0, x)
     elif input_function == "elu":
-        result = x if x > 0 else math.exp(x) - 1
+        result = x if x > 0 else 0.01 * (math.exp(x) - 1)
     else:
         print(f"{input_function} is not supported.")
         return
