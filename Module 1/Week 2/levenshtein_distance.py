@@ -2,7 +2,10 @@ def levenshtein_distance(s1, s2):
     m = len(s1)
     n = len(s2)
 
-    matrix = [[0] * (n + 1) for _ in range(m + 1)]
+    matrix = []
+
+    for _ in range(m + 1):
+        matrix.append([0] * (n + 1))
 
     for i in range(m + 1):
         matrix[i][0] = i
